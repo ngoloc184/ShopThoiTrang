@@ -144,11 +144,11 @@ namespace GUI
         {
 
             //chart1.Series["Nhập hàng"].ArgumentDataMember = "Thang";
-            if (cboHH.Text.Trim() == "hàng hoá bán")
+            if (cboHH.Text.Trim() == "Hàng hoá bán")
             {
                 chart2.DataSource = xl.SanPhamban(ngaybatdau, ngayketthuc);
             }
-            else
+            else if (cboHH.Text.Trim() == "Hàng hoá nhập")
             {
                 chart2.DataSource = xl.SanPhamNhap(ngaybatdau, ngayketthuc);
             }
@@ -156,19 +156,22 @@ namespace GUI
             chart2.Series["Sản phẩm"].YValueMembers = "soluong";
 
             //Biểu đồ thống kê doanh thu khách sạn và tour trong năm
-            chart2.Titles[0].Text = "Biểu đồ thống kê số lượng " + chuoi + " từ " + dateBD.ToString() + " đến ngày " + dateKT.ToString();
+            chart2.Titles[0].Text = "Biểu đồ thống kê số lượng " + chuoi + " từ " + dateBD.Text.ToString() + " đến ngày " + dateKT.Text.ToString();
             chart2.DataBind(); 
         }
         
 
         private void btnXem2_Click(object sender, EventArgs e)
         {
-            BD_HangHoabanduoc(dateBD.Text.ToString(), dateKT.Text.ToString(), "hàng hoá bán");
+            if (cboHH.Text.Trim() == "Hàng hoá bán")
+            {
+                BD_HangHoabanduoc(dateBD.Text.ToString(), dateKT.Text.ToString(), "hàng hoá bán");
+            }
+            else if (cboHH.Text.Trim() == "Hàng hoá nhập")
+            {
+                BD_HangHoabanduoc(dateBD.Text.ToString(), dateKT.Text.ToString(), "hàng hoá nhập");
+            }
         }
-
-        private void frmBieuDo_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

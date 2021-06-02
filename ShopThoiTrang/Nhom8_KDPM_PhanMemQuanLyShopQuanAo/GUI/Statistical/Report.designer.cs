@@ -59,18 +59,12 @@
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.TotalPrice = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Discount = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Food = new DevExpress.XtraReports.UI.CalculatedField();
-            this.Price = new DevExpress.XtraReports.UI.CalculatedField();
-            this.Total = new DevExpress.XtraReports.UI.CalculatedField();
-            this.AmountFood = new DevExpress.XtraReports.UI.CalculatedField();
             this.persistentRepository1 = new DevExpress.XtraEditors.Repository.PersistentRepository(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.FromDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ToDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.NguoiLap = new DevExpress.XtraReports.Parameters.Parameter();
-            this.NCC = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Thang = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -147,7 +141,7 @@
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel6,
+            this.xrLabel7,
             this.xrLabel21,
             this.xrLabel18,
             this.xrLabel17,
@@ -395,68 +389,37 @@
             this.TotalPrice.Type = typeof(int);
             this.TotalPrice.ValueInfo = "0";
             // 
-            // Discount
-            // 
-            this.Discount.Description = "Giảm giá";
-            this.Discount.Name = "Discount";
-            this.Discount.Type = typeof(int);
-            this.Discount.ValueInfo = "0";
-            // 
-            // Food
-            // 
-            this.Food.DisplayName = "Tên món";
-            this.Food.Name = "Food";
-            // 
-            // Price
-            // 
-            this.Price.DisplayName = "Đơn giá";
-            this.Price.Name = "Price";
-            // 
-            // Total
-            // 
-            this.Total.DisplayName = "Thành tiền";
-            this.Total.Name = "Total";
-            // 
-            // AmountFood
-            // 
-            this.AmountFood.DisplayName = "Số lượng";
-            this.AmountFood.Name = "AmountFood";
-            // 
             // FromDate
             // 
             this.FromDate.Description = "Parameter1";
             this.FromDate.Name = "FromDate";
             this.FromDate.Type = typeof(System.DateTime);
             // 
-            // ToDate
-            // 
-            this.ToDate.Description = "Parameter1";
-            this.ToDate.Name = "ToDate";
-            this.ToDate.Type = typeof(System.DateTime);
-            // 
             // NguoiLap
             // 
             this.NguoiLap.Description = "Parameter1";
             this.NguoiLap.Name = "NguoiLap";
             // 
-            // NCC
+            // Thang
             // 
-            this.NCC.Description = "Parameter1";
-            this.NCC.Name = "NCC";
+            this.Thang.Description = "Parameter1";
+            this.Thang.Name = "Thang";
+            this.Thang.Type = typeof(int);
+            this.Thang.ValueInfo = "0";
             // 
-            // xrLabel6
+            // xrLabel7
             // 
-            this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?Thang")});
-            this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(218.3162F, 121.1879F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(46.83604F, 20.21045F);
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.StylePriority.UseTextAlignment = false;
-            this.xrLabel6.Text = "xrLabel12";
-            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(197.1376F, 121.1879F);
+            this.xrLabel7.Multiline = true;
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(51.66666F, 23F);
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.Text = "xrLabel7";
+            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Reportt
             // 
@@ -465,28 +428,20 @@
             this.TopMargin,
             this.BottomMargin});
             this.Bookmark = "Reportt";
-            this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
-            this.Food,
-            this.AmountFood,
-            this.Price,
-            this.Total});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.bindingSource1});
             this.DataSource = this.bindingSource1;
             this.Margins = new System.Drawing.Printing.Margins(0, 2, 199, 104);
-            this.Name = "Reportt";
             this.PageHeight = 1276;
             this.PageWidth = 578;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.TableName,
-            this.Discount,
             this.CreateDate,
             this.TotalPrice,
             this.FromDate,
-            this.ToDate,
             this.NguoiLap,
-            this.NCC});
+            this.Thang});
             this.RollPaper = true;
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
@@ -502,19 +457,14 @@
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private DevExpress.XtraReports.UI.CalculatedField Food;
-        private DevExpress.XtraReports.UI.CalculatedField Price;
-        private DevExpress.XtraReports.UI.CalculatedField Total;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
-        private DevExpress.XtraReports.UI.CalculatedField AmountFood;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.Parameters.Parameter TableName;
-        private DevExpress.XtraReports.Parameters.Parameter Discount;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.Parameters.Parameter CreateDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
@@ -525,9 +475,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.Parameters.Parameter FromDate;
-        private DevExpress.XtraReports.Parameters.Parameter ToDate;
         private DevExpress.XtraReports.Parameters.Parameter NguoiLap;
-        private DevExpress.XtraReports.Parameters.Parameter NCC;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
@@ -539,6 +487,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.Parameters.Parameter Thang;
     }
 }

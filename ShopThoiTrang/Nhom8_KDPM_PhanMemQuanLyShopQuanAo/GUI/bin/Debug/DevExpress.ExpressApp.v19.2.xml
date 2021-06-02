@@ -2010,9 +2010,9 @@
     </member>
     <member name="M:DevExpress.ExpressApp.BaseObjectSpace.GetObject(System.Object)">
       <summary>
-        <para>Retrieves an object that corresponds to an <see cref="T:DevExpress.ExpressApp.IObjectRecord"/> wrapper or object from another Object Space.</para>
+        <para>Retrieves an object that corresponds to a specific object from another Object Space or to a specific record from a data view created by the  method.</para>
       </summary>
-      <param name="obj">An business object wrapper or object from another Object Space that corresponds to the required persistent object.</param>
+      <param name="obj">An object from another Object Space or the data view record corresponding to the required persistent object.</param>
       <returns>An object retrieved from the database via the current Object Space.</returns>
     </member>
     <member name="M:DevExpress.ExpressApp.BaseObjectSpace.GetObject``1(``0)">
@@ -7046,17 +7046,6 @@
         <para>The notification window is displayed as a warning message.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.ExpressApp.IObjectRecord">
-      <summary>
-        <para>The interface for business object wrappers that XAF uses in different List View data access modes.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.ExpressApp.IObjectRecord.ObjectType">
-      <summary>
-        <para>Gets a type of an original business object wrapped in <see cref="T:DevExpress.ExpressApp.XafDataViewRecord"/> or <see cref="T:DevExpress.ExpressApp.ObjectRecord"/>.</para>
-      </summary>
-      <value>The Type of an original business object wrapped in XafDataViewRecord or ObjectRecord.</value>
-    </member>
     <member name="T:DevExpress.ExpressApp.IObjectSpace">
       <summary>
         <para>Declares members implemented by Object Space.</para>
@@ -7394,9 +7383,9 @@
     </member>
     <member name="M:DevExpress.ExpressApp.IObjectSpace.GetObject(System.Object)">
       <summary>
-        <para>Retrieves an object that corresponds to an <see cref="T:DevExpress.ExpressApp.IObjectRecord"/> wrapper or object from another Object Space.</para>
+        <para>Retrieves an object that corresponds to a specific object from another Object Space or to a specific record from a data view created by the  method.</para>
       </summary>
-      <param name="obj">A business object wrapper or object from another Object Space that corresponds to the required persistent object.</param>
+      <param name="obj">An object from another Object Space or the data view record corresponding to the required persistent object.</param>
       <returns>An object retrieved from the database via the current Object Space.</returns>
     </member>
     <member name="M:DevExpress.ExpressApp.IObjectSpace.GetObject``1(``0)">
@@ -7869,9 +7858,9 @@
     </member>
     <member name="M:DevExpress.ExpressApp.IObjectSpaceAsync.GetObjectAsync(System.Object,System.Threading.CancellationToken)">
       <summary>
-        <para>Asynchronously retrieves an object from another Object Space to the current Object Space or gets a wrapped object (i.e., wrapped in <see cref="T:DevExpress.ExpressApp.IObjectRecord"/>).</para>
+        <para>Asynchronously retrieves an object from another Object Space to the current Object Space or gets a wrapped object (i.e., wrapped in <see cref="T:DevExpress.ExpressApp.XafDataViewRecord"/> or <see cref="T:DevExpress.ExpressApp.XafInstantFeedbackRecord"/>).</para>
       </summary>
-      <param name="obj">A business object wrapper or object from another Object Space that corresponds to the required persistent object.</param>
+      <param name="obj">An object that represents a template object from another Object Space.</param>
       <param name="cancellationToken">A CancellationToken object that delivers a cancellation notice to the running operation.</param>
       <returns>A Task that returns an object. This object represents the evaluated value.</returns>
     </member>
@@ -12405,49 +12394,6 @@
       </summary>
       <value>An object that is being manipulated.</value>
     </member>
-    <member name="T:DevExpress.ExpressApp.ObjectRecord">
-      <summary>
-        <para>Contains information to get the wrapped object&#39;s value or to load the complete business object from a database in InstantFeedback, InstantFeedbackView, or ServerView mode.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.ExpressApp.ObjectRecord.#ctor(System.Type,System.Object,System.Nullable{System.Int32})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.ObjectRecord"/> class with specified settings.</para>
-      </summary>
-      <param name="objectType">A Type of a business object wrapped in an ObjectRecord.</param>
-      <param name="objectKeyValue">A key value of an object wrapped in an ObjectRecord.</param>
-      <param name="rowHandle">A nullable integer value that identifies the data row bound to an ObjectRecord.</param>
-    </member>
-    <member name="E:DevExpress.ExpressApp.ObjectRecord.EvaluatorContextDescriptorGetting">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.ExpressApp.ObjectRecord.GetEvaluatorContextDescriptor(DevExpress.ExpressApp.IObjectSpace)">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <param name="objectSpace"></param>
-      <returns></returns>
-    </member>
-    <member name="P:DevExpress.ExpressApp.ObjectRecord.ObjectKeyValue">
-      <summary>
-        <para>Gets the value of the wrapped object&#39;s key property.</para>
-      </summary>
-      <value>An Object that is a value of the wrapped object&#39;s key property.</value>
-    </member>
-    <member name="P:DevExpress.ExpressApp.ObjectRecord.ObjectType">
-      <summary>
-        <para>Gets the type of an original business object.</para>
-      </summary>
-      <value>The Type of an original business object.</value>
-    </member>
-    <member name="P:DevExpress.ExpressApp.ObjectRecord.RowHandle">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
     <member name="T:DevExpress.ExpressApp.ObjectsCountGettingEventArgs">
       <summary>
         <para>Arguments, passed to the <see cref="E:DevExpress.ExpressApp.NonPersistentObjectSpace.ObjectsCountGetting"/> event.</para>
@@ -12766,11 +12712,6 @@
     <member name="F:DevExpress.ExpressApp.SchemaUpdateMode.None">
       <summary>
         <para>Database compatibility issues are ignored.</para>
-      </summary>
-    </member>
-    <member name="N:DevExpress.ExpressApp.Security">
-      <summary>
-        <para>Contains interfaces and classes of the Security System module.</para>
       </summary>
     </member>
     <member name="T:DevExpress.ExpressApp.Security.IOperationPermission">
@@ -17835,11 +17776,11 @@ For the List Views used by the Lookup Property Editors, the default value is Vis
       <param name="viewId">A string containing the identifier of the View.</param>
       <param name="scrollPosition">A <see cref="T:System.Drawing.Point"/> object specifying the scroll bar position of the Window displaying the View.</param>
     </member>
-    <member name="P:DevExpress.ExpressApp.ViewShortcut.Empty">
+    <member name="F:DevExpress.ExpressApp.ViewShortcut.Empty">
       <summary>
         <para>Provides access to an empty View Shortcut which can be used for comparison purposes.</para>
       </summary>
-      <value>A new <see cref="T:DevExpress.ExpressApp.ViewShortcut"/> object.</value>
+      <value></value>
     </member>
     <member name="M:DevExpress.ExpressApp.ViewShortcut.Equals(System.Object)">
       <summary>
@@ -17882,12 +17823,6 @@ to key/value pairs of the current View Shortcut; otherwise, false.</returns>
         <para>Indicates whether the <see cref="P:DevExpress.ExpressApp.ViewShortcut.ObjectClassName"/> or <see cref="P:DevExpress.ExpressApp.ViewShortcut.ViewId"/> property is set.</para>
       </summary>
       <value>true, if ObjectClassName or ViewId is not null or empty; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.ExpressApp.ViewShortcut.IsEmpty">
-      <summary>
-        <para>Checks whether the shortcut is empty.</para>
-      </summary>
-      <value>true, if the shortcut is empty; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.ExpressApp.ViewShortcut.IsNewObject">
       <summary>
@@ -19532,7 +19467,7 @@ to key/value pairs of the current View Shortcut; otherwise, false.</returns>
     </member>
     <member name="T:DevExpress.ExpressApp.XafDataViewRecord">
       <summary>
-        <para>An abstract class that implements <see cref="T:DevExpress.ExpressApp.IObjectRecord"/> and represents a lightweight read-only data record (a data view) retrieved from a database without loading a complete business object.</para>
+        <para>An abstract class that represents a lightweight read-only data record (a data view) retrieved from a database without loading a complete business object.</para>
       </summary>
     </member>
     <member name="M:DevExpress.ExpressApp.XafDataViewRecord.#ctor(DevExpress.ExpressApp.XafDataView)">
@@ -19658,7 +19593,7 @@ to key/value pairs of the current View Shortcut; otherwise, false.</returns>
     </member>
     <member name="T:DevExpress.ExpressApp.XafInstantFeedbackRecord">
       <summary>
-        <para>This class is an obsolete wrapper for business objects processed in a List View in the InstantFeedback data access mode. Use  <see cref="T:DevExpress.ExpressApp.IObjectRecord"/> instead.</para>
+        <para>Contains information that is required to get the wrapped object&#39;s values of a corresponding Grid View row or to load the corresponding complete business object from a database in InstantFeedback mode.</para>
       </summary>
     </member>
     <member name="M:DevExpress.ExpressApp.XafInstantFeedbackRecord.#ctor(System.Type,System.Object,System.Nullable{System.Int32})">

@@ -142,7 +142,7 @@ namespace GUI
 
         private void cbbNam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if((cbbThang.Text != "Tháng" && cbbNam.Text != "Năm"))
+            if ((cbbThang.Text != "Tháng" && cbbNam.Text != "Năm"))
             {
                 rdProduct.Enabled = true;
                 rdRevenue.Enabled = true;
@@ -151,6 +151,14 @@ namespace GUI
             {
                 rdProduct.Enabled = false;
                 rdRevenue.Enabled = false;
+            }
+            if (rdProduct.Checked)
+            {
+                rdProduct_CheckedChanged(sender, e);
+            }
+            if (rdRevenue.Checked)
+            {
+                rdRevenue_CheckedChanged(sender, e);
             }
         }
 
@@ -166,26 +174,45 @@ namespace GUI
                 rdProduct.Enabled = false;
                 rdRevenue.Enabled = false;
             }
+            if (rdProduct.Checked)
+            {
+                rdProduct_CheckedChanged(sender, e);
+            }
+            if (rdRevenue.Checked)
+            {
+                rdRevenue_CheckedChanged(sender, e);
+            }
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show(string.Format("Bạn có chắc xuất báo cáo doanh thu này chứ?"),
-                 "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (cbbThang.Text != "Tháng" && cbbNam.Text != "Năm")
             {
-                ReportPrintTool tool = new ReportPrintTool(report);
+                if (XtraMessageBox.Show(string.Format("Bạn có chắc xuất báo cáo doanh thu này chứ?"),
+                 "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    ReportPrintTool tool = new ReportPrintTool(report);
 
-                report.DataSource = context.thongKeHoaDonTheoThang(Convert.ToInt32(cbbThang.Text), Convert.ToInt32(cbbNam.Text));
-                report.Parameters["CreateDate"].Value = DateTime.Now.Date;
-                report.Parameters["NguoiLap"].Value = "Thao";
-                report.Parameters["TotalPrice"].Value = label1.Text;
-                tool.ShowPreview();
+                    report.DataSource = context.thongKeHoaDonTheoThang(Convert.ToInt32(cbbThang.Text), Convert.ToInt32(cbbNam.Text));
+                    report.Parameters["CreateDate"].Value = DateTime.Now.Date;
+                    report.Parameters["NguoiLap"].Value = "Thao";
+                    report.Parameters["TotalPrice"].Value = label1.Text;
+                    report.Parameters["Thang"].Value = cbbThang.Text.ToString();
+                    tool.ShowPreview();
+                }
             }
+            else
+            {
+                XtraMessageBox.Show("Bạn chưa chọn đủ ngày tháng", "Thông báo");
+            }
+
         }
+        
 
-        private void frStatistical_Load(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
-
+            frmBieuDo frm = new frmBieuDo();
+            frm.ShowDialog();
         }
     }
 }

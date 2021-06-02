@@ -37,7 +37,7 @@ namespace GUI
             txtMaGG.Enabled = false;
             gcGiamGia.DataSource = g.layDSGG();
 
-        }   
+        }
 
         private void btnTaoMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -81,6 +81,15 @@ namespace GUI
                     gg.TENGIAMGIA = txtTenGG.Text;
                     g.suaGG(gg);
                     gcGiamGia.DataSource = g.layDSGG();
+                    MessageBox.Show("Sửa thành công giảm giá " + gg.MAGIAMGIA);
+                    dtpNgayBD.Text = DateTime.Now.ToString();
+                    dtpNgayKT.Text = DateTime.Now.ToString();
+                    txtGiaTri.Clear();
+                    txtMoTa.Clear();
+                    txtMaGG.Clear();
+                    txtTenGG.Clear();
+                    txtYeuCau.Clear();
+                    txtMucGG.Clear();
                 }
 
             }
@@ -113,6 +122,15 @@ namespace GUI
                 gg.TENGIAMGIA = txtTenGG.Text;
                 g.themGG(gg);
                 gcGiamGia.DataSource = g.layDSGG();
+                MessageBox.Show("Thêm thành công");
+                dtpNgayBD.Text = DateTime.Now.ToString();
+                dtpNgayKT.Text = DateTime.Now.ToString();
+                txtGiaTri.Clear();
+                txtMoTa.Clear();
+                txtMaGG.Clear();
+                txtTenGG.Clear();
+                txtYeuCau.Clear();
+                txtMucGG.Clear();
             }
         }
 
@@ -125,19 +143,19 @@ namespace GUI
 
         private void txtGiaTri_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar)) 
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
         private void txtMucGG_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && (e.KeyChar != '.' || (e.KeyChar == '.' && (txtMucGG.Text.Length == 0 || txtMucGG.Text.IndexOf('.') != -1)))) 
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && (e.KeyChar != '.' || (e.KeyChar == '.' && (txtMucGG.Text.Length == 0 || txtMucGG.Text.IndexOf('.') != -1))))
                 e.Handled = true;
         }
 
         private void txtYeuCau_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar)) 
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
     }

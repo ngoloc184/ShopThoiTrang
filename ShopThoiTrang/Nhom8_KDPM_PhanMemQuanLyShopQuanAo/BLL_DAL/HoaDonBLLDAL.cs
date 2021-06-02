@@ -50,10 +50,11 @@ namespace BLL_DAL
                       join hd in dbContext.HOADONs on cthd.MAHOADON equals hd.MAHOADON
                       join spp in dbContext.SANPHAMs on sp.MASANPHAM equals spp.MASANPHAM
                       where Convert.ToInt32(hd.NGAYTAO.Value.Month.ToString()) == pThang && Convert.ToInt32(hd.NGAYTAO.Value.Year.ToString()) == pNam
+                      group spp by spp.TENSANPHAM into g
                       select new
                       {
-                          spp.TENSANPHAM,
-                          cthd.SOLUONG
+                          TENSANPHAM = g.Key,
+                          SOLUONG = g.Count()
                       };
             return ans;
         }

@@ -31,15 +31,16 @@ namespace GUI
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(txtMaSP.Text == "")
+            if (txtMaSP.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn dòng muốn sửa thông tin");
             }
-            else if(txtDonGia.Text =="" ||txtKhuyenMai.Text == ""||txtMota.Text==""||txtTenSP.Text=="")
+            else if (txtDonGia.Text == "" || txtKhuyenMai.Text == "" || txtMota.Text == "" || txtTenSP.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin");
-            }    
-            else {
+            }
+            else
+            {
                 //sp.luuSanPham(int.Parse(txtMaSP.Text), txtTenSP.Text, int.Parse(txtDonGia.Text), int.Parse(txtKhuyenMai.Text), txtMota.Text);
                 SANPHAM s = new SANPHAM();
                 s.MASANPHAM = int.Parse(gridView1.GetFocusedRowCellDisplayText("MASANPHAM"));
@@ -49,9 +50,16 @@ namespace GUI
                 s.MOTA = txtMota.Text;
                 sp.suaTTSP(s);
 
-                
+
                 gcSanPham.DataSource = sp.loadSP();
-                
+                MessageBox.Show("Sửa thành công sản phẩm " + s.MASANPHAM);
+                txtDonGia.Clear();
+                txtKhuyenMai.Clear();
+                txtMaSP.Clear();
+                txtMota.Clear();
+                txtTenSP.Clear();
+                cboTenLoai.Text = "";
+                cboTenLoai.Enabled = false;
 
             }
         }
@@ -87,37 +95,46 @@ namespace GUI
         private void btnTaoMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             cboTenLoai.Enabled = true;
-            cboTenLoai.DataSource = loaisp.load_DSLoai().Select(s=>s.TENLOAISANPHAM);
+            cboTenLoai.DataSource = loaisp.load_DSLoai().Select(s => s.TENLOAISANPHAM);
             txtDonGia.Clear();
             txtKhuyenMai.Clear();
             txtMaSP.Clear();
             txtMota.Clear();
-            txtTenSP.Clear();           
+            txtTenSP.Clear();
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(txtMaSP.Text != "")
+            if (txtMaSP.Text != "")
             {
                 MessageBox.Show("Vui lòng chọn tạo mới");
-            }    
+            }
             else
             {
-                if(txtDonGia.Text == "" || txtKhuyenMai.Text == "" || txtMota.Text == ""|| txtTenSP.Text == "")
+                if (txtDonGia.Text == "" || txtKhuyenMai.Text == "" || txtMota.Text == "" || txtTenSP.Text == "")
                 {
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                 }
                 else
                 {
-                    SANPHAM sp = new SANPHAM();
-                    sp.DONGIA = int.Parse(txtDonGia.Text);
-                    sp.KHUYENMAI = int.Parse(txtKhuyenMai.Text);
-                    sp.MOTA = txtMota.Text;
-                    sp.TENSANPHAM = txtTenSP.Text;
-                    sp.MALOAISANPHAM = loaisp.loaiSP_tenLoai(cboTenLoai.Text).MALOAISANPHAM;
-
-                }    
-            }    
+                    SANPHAM s = new SANPHAM();
+                    s.DONGIA = int.Parse(txtDonGia.Text);
+                    s.KHUYENMAI = int.Parse(txtKhuyenMai.Text);
+                    s.MOTA = txtMota.Text;
+                    s.TENSANPHAM = txtTenSP.Text;
+                    s.MALOAISANPHAM = loaisp.loaiSP_tenLoai(cboTenLoai.Text).MALOAISANPHAM;
+                    sp.themSP(s);
+                    gcSanPham.DataSource = sp.loadSP();
+                    MessageBox.Show("Thêm thành công");
+                    txtDonGia.Clear();
+                    txtKhuyenMai.Clear();
+                    txtMaSP.Clear();
+                    txtMota.Clear();
+                    txtTenSP.Clear();
+                    cboTenLoai.Text = "";
+                    cboTenLoai.Enabled = false;
+                }
+            }
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -134,13 +151,13 @@ namespace GUI
 
         private void txtDonGia_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar)) 
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
         private void txtKhuyenMai_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar)) 
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 

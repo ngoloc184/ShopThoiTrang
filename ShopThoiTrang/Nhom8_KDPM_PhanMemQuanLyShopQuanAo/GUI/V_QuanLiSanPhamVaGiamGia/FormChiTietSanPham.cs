@@ -52,17 +52,22 @@ namespace GUI
             }
             else
             {
-                if(txtSL.Text == "")
+                if (txtSL.Text == "")
                 {
                     MessageBox.Show("Vui lòng chọn số lượng để đổi");
                     return;
-                }    
+                }
                 CHITIETSANPHAM ct = new CHITIETSANPHAM();
                 ct.MACHITIETSP = int.Parse(txtMaCTSP.Text);
                 ct.SOLUONGTON = int.Parse(txtSL.Text);
                 ctsp.suaCTSP(ct);
                 gcCTSP.DataSource = ctsp.timDSCT(maSP);
-
+                MessageBox.Show("Sửa thành công sản phẩm " + ct.MACHITIETSP);
+                txtMaCTSP.Clear();
+                txtMaSP.Clear();
+                txtSL.Clear();
+                cboSize.Text = "";
+                CboMau.Text = "";
             }
         }
 

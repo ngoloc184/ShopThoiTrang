@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_DAL;
 using GUI.V_BaoHanh;
+using DevExpress.XtraSplashScreen;
+
 namespace GUI
 {
     public partial class Menu_Ribbon : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -21,8 +23,20 @@ namespace GUI
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frStatistical qlsp = new frStatistical();
-            qlsp.Show();
+            Form frm = this.KiemTraTonTai(typeof(frmBieuDo));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                frmBieuDo f = new frmBieuDo
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
+
         }
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
@@ -34,8 +48,19 @@ namespace GUI
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormQLSP qlsp = new FormQLSP();
-            qlsp.Show();
+            Form frm = this.KiemTraTonTai(typeof(FormQLSP));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                FormQLSP f = new FormQLSP
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
         }
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
@@ -45,20 +70,53 @@ namespace GUI
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormNhanVien frm = new FormNhanVien();
-            frm.Show();
+            Form frm = this.KiemTraTonTai(typeof(FormNhanVien));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                FormNhanVien f = new FormNhanVien
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
         }
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormGiamGia gg = new FormGiamGia();
-            gg.Show();
+            Form frm = this.KiemTraTonTai(typeof(FormGiamGia));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                FormGiamGia f = new FormGiamGia
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormNhapHang frm = new FormNhapHang();
-            frm.Show();
+            Form frm = this.KiemTraTonTai(typeof(FormNhapHang));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                FormNhapHang f = new FormNhapHang
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
         }
 
         private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
@@ -70,17 +128,69 @@ namespace GUI
         {
            if(Program.frmLogin.TaiKhoan.NHANVIEN.CHUCVU== "QuanLy")
             {
-             FormNhanVien frm = new FormNhanVien();
-             frm.Show();
+                Form frm = this.KiemTraTonTai(typeof(FormNhanVien));
+                if (frm != null)
+                    frm.Activate();
+                else
+                {
+                    SplashScreenManager.ShowDefaultWaitForm();
+                    FormNhanVien f = new FormNhanVien
+                    {
+                        MdiParent = this
+                    };
+                    f.Show();
+                    SplashScreenManager.CloseDefaultSplashScreen();
+                }
                 return;
             }
             MessageBox.Show("Chức năng này chỉ dành cho Quản Lý");           
         }
 
+        private void Báo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frStatistical));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                frStatistical f = new frStatistical
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
+        }
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormBaoHanh frm = new FormBaoHanh();
-            frm.Show();
+            Form frm = this.KiemTraTonTai(typeof(FormBaoHanh));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                FormBaoHanh f = new FormBaoHanh
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
+
         }
+        #region Methods
+        //Kiểm tra sự tồn tại của form con
+        private Form KiemTraTonTai(Type fType)
+        {
+            foreach (Form f in MdiChildren)
+            {
+                if (f.GetType() == fType) //Neu Form duoc truyen vao da duoc mo
+                    return f;
+            }
+            return null;
+        }
+        #endregion
+
     }
 }
