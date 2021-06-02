@@ -14,11 +14,12 @@ namespace GUI
     {
         
         public static FormLogin frmLogin;
-        public static string linkURL_Image = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
-        public static string linkURL_SanPham = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
-        public static string linkURL_LoaiSP = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
-        public static string linkURL_KhachHang = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
-        public static string linkURL_NhanVien = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\"; 
+        public static string linkURL_Image = @"D:\CongNghePhanMem\1_gitNhom\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
+        //public static string linkURL_SanPham = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
+        //public static string linkURL_LoaiSP = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
+        //public static string linkURL_KhachHang = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
+        //public static string linkURL_NhanVien = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\"; 
+        
         public static FormTN formTN =null;
         public static List<CHITIETHOADON> dsBaoHanh = new List<CHITIETHOADON>();
         public static Cart dsPhieuNhap = new Cart();
@@ -32,8 +33,8 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormQLSP ());
-
+            frmLogin = new FormLogin();
+            Application.Run(frmLogin);
         }
     }
 }

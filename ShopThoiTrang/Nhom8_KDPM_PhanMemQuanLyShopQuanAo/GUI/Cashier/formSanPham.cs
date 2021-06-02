@@ -41,7 +41,7 @@ namespace GUI.Cashier
             if ((e.IsGetData) && (e.Column.FieldName == "HINHANH"))
             {
                 string fileName = gridView1.GetListSourceRowCellValue(e.ListSourceRowIndex, colHINHANH).ToString();
-                e.Value = Bitmap.FromFile(Program.linkURL_SanPham+fileName);
+                e.Value = Bitmap.FromFile(Program.linkURL_Image + @"sanpham\"+fileName);
             }
         }
         public bool flag = false;
@@ -60,7 +60,7 @@ namespace GUI.Cashier
                 lbMoTa.Text = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "").Substring(0, 150) + "...";
             else
                 lbMoTa.Text = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "");
-            picHinhAnh.Image = Image.FromFile(Program.linkURL_SanPham + gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]));
+            picHinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"sanpham\" + gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]));
 
         }
 

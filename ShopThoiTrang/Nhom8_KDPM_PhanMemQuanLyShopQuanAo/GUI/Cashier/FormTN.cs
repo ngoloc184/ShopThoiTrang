@@ -62,7 +62,7 @@ namespace GUI
             listAccord = new AccordionControlElement[listTypes.Count()+1];
 
             AccordionControlElement b = new AccordionControlElement();
-            setupAccordionControlElement(b, 0, "loaiSP" + "All", Program.linkURL_LoaiSP + "closet.png", "Tất cả sản phẩm");
+            setupAccordionControlElement(b, 0, "loaiSP" + "All", Program.linkURL_Image + @"loaisanpham\" + "closet.png", "Tất cả sản phẩm");
             b.Click += ItemProduct_Click;
             b.Tag = "0";
 
@@ -70,7 +70,7 @@ namespace GUI
             for (int i = 0; i < listAccord.Count()-1; i++)
             {
                 AccordionControlElement a = new AccordionControlElement();
-                setupAccordionControlElement(a, (i+1), "loaiSP" + listTypes[i].MALOAISANPHAM, Program.linkURL_LoaiSP + listTypes[i].hinhAnh, listTypes[i].TENLOAISANPHAM);
+                setupAccordionControlElement(a, (i+1), "loaiSP" + listTypes[i].MALOAISANPHAM, Program.linkURL_Image + @"loaisanpham\" + listTypes[i].hinhAnh, listTypes[i].TENLOAISANPHAM);
                 a.Click += ItemProduct_Click;
                 a.Tag = i+1;
             }
@@ -364,7 +364,7 @@ namespace GUI
             panelControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
 
             PictureEdit pictureEdit = new PictureEdit();
-            setupControls.setupPicture(pictureEdit, Program.linkURL_SanPham + sanpham.HINHANH);
+            setupControls.setupPicture(pictureEdit, Program.linkURL_Image + @"sanpham\" + sanpham.HINHANH);
             panelControl.Controls.Add(pictureEdit);
             pictureEdit.Location = new System.Drawing.Point(5, 5);
             pictureEdit.Size = new System.Drawing.Size(265, 390);

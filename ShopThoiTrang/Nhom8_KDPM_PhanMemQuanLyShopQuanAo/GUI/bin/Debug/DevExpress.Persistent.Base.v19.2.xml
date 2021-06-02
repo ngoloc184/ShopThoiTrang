@@ -4,6 +4,11 @@
     <name>DevExpress.Persistent.Base.v19.2</name>
   </assembly>
   <members>
+    <member name="N:DevExpress.ExpressApp.Chart">
+      <summary>
+        <para>Contains classes and interfaces specific to the Chart Module functionality.</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.ExpressApp.Chart.ICustomizationEnabledProvider">
       <summary>
         <para>Declares members implemented by charting entities, that allow or prohibit end-user customization to charts displayed in a UI.</para>
@@ -14,6 +19,11 @@
         <para>Indicates whether end-users can customize charts settings in Windows Forms applications, via the context menu&#39;s Invoke Wizard and Clear Settings Actions.</para>
       </summary>
       <value>true, if end-user customizations are allowed in Windows Forms applications; otherwise, false.</value>
+    </member>
+    <member name="N:DevExpress.ExpressApp.ConditionalAppearance">
+      <summary>
+        <para>Contains classes specific to the Conditional Appearance Module functionality.</para>
+      </summary>
     </member>
     <member name="T:DevExpress.ExpressApp.ConditionalAppearance.AppearanceAttribute">
       <summary>
@@ -301,6 +311,11 @@
       </summary>
       <returns></returns>
     </member>
+    <member name="N:DevExpress.ExpressApp.ReportsV2">
+      <summary>
+        <para>Contains interfaces and classes that are specific to the Reports V2 Module.</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.ExpressApp.ReportsV2.IInplaceReportV2">
       <summary>
         <para>Implemented by persistent classes used to store reports that can be used as inplace repors.</para>
@@ -381,6 +396,11 @@
         <para>Gets an Object Space used by the report parameters Detail View.</para>
       </summary>
       <value>An <see cref="T:DevExpress.ExpressApp.IObjectSpace"/> object used by the report parameters Detail View.</value>
+    </member>
+    <member name="N:DevExpress.Persistent.Base">
+      <summary>
+        <para>Contains interfaces and classes used in eXpressApp Framework modules (special assemblies implementing particular features). Interfaces are implemented in some classes from the Business Class Library&#39;s DevExpress.Persistent.BaseImpl.dll assembly.</para>
+      </summary>
     </member>
     <member name="T:DevExpress.Persistent.Base.FileAttachmentAttribute">
       <summary>

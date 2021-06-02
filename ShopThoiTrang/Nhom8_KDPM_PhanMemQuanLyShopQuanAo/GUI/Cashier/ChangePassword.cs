@@ -23,7 +23,7 @@ namespace GUI.Cashier
         }
         private void loadChangeUser(NHANVIEN nv)
         {
-            picHinhAnh.Image = Image.FromFile(Program.linkURL_NhanVien + nv.HINHANH);
+            picHinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"nhanvien\" + nv.HINHANH);
             txtTenTaiKhoan.Text = nv.TAIKHOANNHANVIENs.First().TENTAIKHOAN;
         }
         private void optionEnable(bool f)

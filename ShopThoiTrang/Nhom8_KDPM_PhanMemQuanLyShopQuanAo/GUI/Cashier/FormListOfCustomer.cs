@@ -126,7 +126,7 @@ namespace GUI.Cashier
             txtSDT.Text = gridView1.GetFocusedRowCellValue("SDT") + "";
             txtEmail.Text = gridView1.GetFocusedRowCellValue("EMAIL") + "";
             if ((gridView1.GetFocusedRowCellValue("HINHANH") + ""!= null))
-                picHinhAnh.Image = Image.FromFile(Program.linkURL_KhachHang + gridView1.GetFocusedRowCellValue("HINHANH") + "");
+                picHinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"KhachHang\" + gridView1.GetFocusedRowCellValue("HINHANH") + "");
             txtDiemTichLuy.Text = gridView1.GetFocusedRowCellValue("DIEMTICHLUY") + "";
 
         }
@@ -162,7 +162,7 @@ namespace GUI.Cashier
 
         private void picHinhAnh_DoubleClick(object sender, EventArgs e)
         {
-            xtraOpenFileDialog1.InitialDirectory = Program.linkURL_KhachHang;
+            xtraOpenFileDialog1.InitialDirectory = Program.linkURL_Image + @"KhachHang\" ;
             xtraOpenFileDialog1.Title = "Browse Text Files";
             if (xtraOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {

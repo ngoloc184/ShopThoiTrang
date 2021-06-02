@@ -9,6 +9,19 @@ namespace BLL_DAL
     public class HoaDonBLLDAL
     {
         QLShopDataContext dbContext = new QLShopDataContext();
+        public List<vw_HoaDon> loadHoaDonTheoNgay()
+        {
+            List<vw_HoaDon> list = new List<vw_HoaDon>();
+            foreach (vw_HoaDon item in dbContext.vw_HoaDons) {
+                if (item.NGAYTAO.Value.Date.Day == DateTime.Now.Date.Day) {
+                    if (item.TENKHACHHANG == null)
+                        item.TENKHACHHANG = "Khách hàng vãng lai";
+                    list.Add(item);
+                }
+            }
+            return list;
+            //return dbContext.vw_HoaDons.Where(hd => hd.NGAYTAO.Value.Date.Daay == DateTime.Now.Date.Day).ToList();
+        }
         public IQueryable<HOADON> load_listHD()
         {
             return dbContext.HOADONs.Select(hd => hd);

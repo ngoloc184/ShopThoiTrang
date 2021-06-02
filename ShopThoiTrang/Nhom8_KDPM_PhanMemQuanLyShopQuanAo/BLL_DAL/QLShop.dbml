@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSHOPTHOITRANG" Class="QLShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=QLSHOPTHOITRANG;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QLSHOPTHOITRANGConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PSA46BF;Initial Catalog=QLSHOPTHOITRANG;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QLSHOPTHOITRANGConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TAIKHOANNHANVIEN" Member="TAIKHOANNHANVIENs">
     <Type Name="TAIKHOANNHANVIEN">
       <Column Name="MATAIKHOAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -83,20 +83,6 @@
       <Column Name="NGAYKT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="MUCGIAMGIA" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="GIAMGIA_HOADON" Member="HOADONs" ThisKey="MAGIAMGIA" OtherKey="MAGIAMGIA" Type="HOADON" />
-    </Type>
-  </Table>
-  <Table Name="dbo.HOADON" Member="HOADONs">
-    <Type Name="HOADON">
-      <Column Name="MAHOADON" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="NGAYTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MANHANVIEN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="MAKHACHHANG" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MAGIAMGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="HOADON_CHITIETHOADON" Member="CHITIETHOADONs" ThisKey="MAHOADON" OtherKey="MAHOADON" Type="CHITIETHOADON" />
-      <Association Name="GIAMGIA_HOADON" Member="GIAMGIA" ThisKey="MAGIAMGIA" OtherKey="MAGIAMGIA" Type="GIAMGIA" IsForeignKey="true" />
-      <Association Name="KHACHHANG_HOADON" Member="KHACHHANG" ThisKey="MAKHACHHANG" OtherKey="MAKHACHHANG" Type="KHACHHANG" IsForeignKey="true" />
-      <Association Name="NHANVIEN_HOADON" Member="NHANVIEN" ThisKey="MANHANVIEN" OtherKey="MANHANVIEN" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
@@ -187,16 +173,6 @@
       <Column Name="masize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.vw_HoaDon" Member="vw_HoaDons">
-    <Type Name="vw_HoaDon">
-      <Column Name="MAHOADON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NGAYTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TENNHANVIEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="TENKHACHHANG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.View_DSCTSP" Member="View_DSCTSPs">
     <Type Name="View_DSCTSP">
       <Column Name="TENMAU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -224,6 +200,29 @@
       <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MAHOADON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MACHITIETSP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOADON" Member="HOADONs">
+    <Type Name="HOADON">
+      <Column Name="MAHOADON" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NGAYTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MANHANVIEN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAKHACHHANG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAGIAMGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HOADON_CHITIETHOADON" Member="CHITIETHOADONs" ThisKey="MAHOADON" OtherKey="MAHOADON" Type="CHITIETHOADON" />
+      <Association Name="GIAMGIA_HOADON" Member="GIAMGIA" ThisKey="MAGIAMGIA" OtherKey="MAGIAMGIA" Type="GIAMGIA" IsForeignKey="true" />
+      <Association Name="KHACHHANG_HOADON" Member="KHACHHANG" ThisKey="MAKHACHHANG" OtherKey="MAKHACHHANG" Type="KHACHHANG" IsForeignKey="true" />
+      <Association Name="NHANVIEN_HOADON" Member="NHANVIEN" ThisKey="MANHANVIEN" OtherKey="MANHANVIEN" Type="NHANVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_HoaDon" Member="vw_HoaDons">
+    <Type Name="vw_HoaDon">
+      <Column Name="MAHOADON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NGAYTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TENKHACHHANG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TENNHANVIEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -21,7 +21,7 @@ namespace GUI.Cashier
         }
         private void loadNhanVien(NHANVIEN nv)
         {
-            picHinhAnh.Image = Image.FromFile(Program.linkURL_NhanVien + nv.HINHANH);
+            picHinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"nhanvien\" + nv.HINHANH);
             lbTenNhanVien.Text = nv.TENNHANVIEN;
             lbEmail.Text = nv.EMAIL;
             lbNgaySinh.Text = nv.NGAYSINH.Value.ToString();

@@ -101,7 +101,7 @@ namespace GUI.Cashier
         {
             if (gridView_HoaDon.GetFocusedRowCellValue("MAVACH") != null)
             {
-                pic_HinhAnh.Image = Image.FromFile(Program.linkURL_SanPham + gridView_HoaDon.GetFocusedRowCellValue("HINHANH") + "");
+                pic_HinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"sanpham\" + gridView_HoaDon.GetFocusedRowCellValue("HINHANH") + "");
                 txtTenSP.Text = (gridView_HoaDon.GetFocusedRowCellValue("TENSANPHAM") + "");
                 cboChonSize.DataSource = ctBLL.tim_DSCT(int.Parse(gridView_HoaDon.GetFocusedRowCellValue("MASANPHAM") + ""));
                 cboChonSize.DisplayMember = "TENSIZE";
@@ -310,8 +310,27 @@ namespace GUI.Cashier
             txtMau.Text = "";
             txtSize.Text = "";
         }
+        bool kiemTraTrong()
+        {
+            if (txtMaVach.Text.Equals(""))
+                return false;
+            if (txtTenSanPham.Text.Equals(""))
+                return false;
+            if (txtDonGia.Text.Equals(""))
+                return false;
+            if (txtSize.Text.Equals(""))
+                return false;
+            if (txtMau.Text.Equals(""))
+                return false;
+            return true;
+        }
         private void btnMua_Click(object sender, EventArgs e)
         {
+            if (!kiemTraTrong())
+            {
+                MessageBox.Show("Bạn vui lòng quét sản phẩm trước khi mua hàng.", "Không thấy mã vạch sản phẩm");
+                return;
+            }
             if (_ct != null)
             {
                 if (Program.formTN.chiTietGioHang == null)

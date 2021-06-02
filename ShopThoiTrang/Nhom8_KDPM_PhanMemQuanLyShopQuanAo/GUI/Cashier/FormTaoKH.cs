@@ -105,7 +105,7 @@ namespace GUI.Cashier
 
         private void pictureHinh_DoubleClick(object sender, EventArgs e)
         {
-            xtraOpenFileDialog1.InitialDirectory = Program.linkURL_KhachHang;
+            xtraOpenFileDialog1.InitialDirectory = Program.linkURL_Image + @"KhachHang\" ;
             xtraOpenFileDialog1.Title = "Browse Text Files";
             if (xtraOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -116,7 +116,7 @@ namespace GUI.Cashier
 
         private void btnHinhAnh_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-            xtraOpenFileDialog1.InitialDirectory = Program.linkURL_KhachHang;
+            xtraOpenFileDialog1.InitialDirectory = Program.linkURL_Image + @"KhachHang  \" ;
             xtraOpenFileDialog1.Title = "Browse Text Files";
             if (xtraOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {

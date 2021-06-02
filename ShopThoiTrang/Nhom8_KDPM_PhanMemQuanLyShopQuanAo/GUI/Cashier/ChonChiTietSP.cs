@@ -28,7 +28,7 @@ namespace GUI.Cashier
         private void setupProduct(List<View_DSCTSP> dssp)
         {
             lbTenSP.Text = dssp[0].TENSANPHAM;
-            picHinhAnh.Image = Image.FromFile(Program.linkURL_SanPham + dssp[0].HINHANH);
+            picHinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"sanpham\" + dssp[0].HINHANH);
             lbSoLuong.Text = dssp[0].KHUYENMAI.ToString()+" Hàng";
             lbDonGia.Text = dssp[0].DONGIA.ToString()+" VNĐ";
             if(dssp[0].MOTA.Length>100)
@@ -174,6 +174,7 @@ namespace GUI.Cashier
                         Program.formTN.chiTietGioHang.Add(ct);
                         MessageBox.Show("Chọn mua " + ct.SOLUONG + " sản phẩm "+ vw[0].TENSANPHAM + " size "+item.TENSIZE+" màu "+item.TENMAU+" thành công!");
                         clear();
+                        Program.formTN.frmSP.quayTroLai();
                     }
                 }
                 else
