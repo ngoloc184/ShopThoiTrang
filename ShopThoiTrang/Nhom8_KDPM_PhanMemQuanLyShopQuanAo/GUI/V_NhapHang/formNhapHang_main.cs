@@ -172,7 +172,29 @@ namespace GUI
         {
             int msp = int.Parse(gridView1.GetFocusedRowCellDisplayText("MASANPHAM"));
             txtMaSP.Text = msp.ToString();
-            gridControl2.DataSource = chiTietSanPham_BLL.timDSCT(msp).Select(t => new { t.MACHITIETSP, t.MAU.TENMAU, t.SIZE.TENSIZE, t.SOLUONGTON });
+            if (int.Parse(txtSoLuongConDuoi.Text)==0)
+            {
+                gridControl2.DataSource = chiTietSanPham_BLL.timDSCT(msp).Select(t => new { t.MACHITIETSP, t.MAU.TENMAU, t.SIZE.TENSIZE, t.SOLUONGTON });
+            }
+            else
+                gridControl2.DataSource = chiTietSanPham_BLL.timDSCT(msp).Where(h=>h.SOLUONGTON<= int.Parse(txtSoLuongConDuoi.Text)).Select(t => new { t.MACHITIETSP, t.MAU.TENMAU, t.SIZE.TENSIZE, t.SOLUONGTON });
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Boolean iSL = int.TryParse(txtSoLuongConDuoi.Text, out int result);
+            if (iSL == false || int.Parse(txtSoLuongConDuoi.Text) <= 0)
+            {
+                MessageBox.Show("Vui lòng chỉ điền số lượng >0");
+                return;
+            }
+            gridControl1.DataSource = sanphambll.listSPTheoSoLuongTon(int.Parse(txtSoLuongConDuoi.Text)).ToList();
+
         }
     }
 }

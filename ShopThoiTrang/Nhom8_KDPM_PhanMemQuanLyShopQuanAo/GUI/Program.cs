@@ -14,7 +14,7 @@ namespace GUI
     {
         
         public static FormLogin frmLogin;
-        public static string linkURL_Image = @"D:\CongNghePhanMem\1_gitNhom\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
+        public static string linkURL_Image = @"C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
         //public static string linkURL_SanPham = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
         //public static string linkURL_LoaiSP = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
         //public static string linkURL_KhachHang = @"E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";

@@ -2580,7 +2580,6 @@ C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GU
 C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormGiamGia.resources
 C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormQLSP.resources
 C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.WaitForm1.resources
-C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.XtraForm1.resources
 C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.exe.licenses
 C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache

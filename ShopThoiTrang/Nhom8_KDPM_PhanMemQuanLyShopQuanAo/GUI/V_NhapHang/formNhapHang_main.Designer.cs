@@ -40,14 +40,6 @@ namespace GUI
             this.label4 = new System.Windows.Forms.Label();
             this.btnThem = new DevExpress.XtraEditors.ButtonEdit();
             this.cbLoaiSP = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMaSP = new System.Windows.Forms.TextBox();
-            this.cbMau = new System.Windows.Forms.ComboBox();
-            this.cbSize = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -70,9 +62,18 @@ namespace GUI
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.cbMau = new System.Windows.Forms.ComboBox();
+            this.cbSize = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtSoLuong = new DevExpress.XtraEditors.SpinEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSoLuongConDuoi = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.btnThem.Properties)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.panel5.SuspendLayout();
@@ -86,14 +87,16 @@ namespace GUI
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongConDuoi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lbThongBao
             // 
             this.lbThongBao.AutoSize = true;
             this.lbThongBao.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThongBao.Location = new System.Drawing.Point(12, 56);
+            this.lbThongBao.Location = new System.Drawing.Point(12, 59);
             this.lbThongBao.Name = "lbThongBao";
             this.lbThongBao.Size = new System.Drawing.Size(36, 22);
             this.lbThongBao.TabIndex = 2;
@@ -103,7 +106,7 @@ namespace GUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(102, 18);
+            this.label4.Location = new System.Drawing.Point(229, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 19);
             this.label4.TabIndex = 0;
@@ -127,97 +130,11 @@ namespace GUI
             // cbLoaiSP
             // 
             this.cbLoaiSP.FormattingEnabled = true;
-            this.cbLoaiSP.Location = new System.Drawing.Point(212, 17);
+            this.cbLoaiSP.Location = new System.Drawing.Point(351, 18);
             this.cbLoaiSP.Name = "cbLoaiSP";
-            this.cbLoaiSP.Size = new System.Drawing.Size(114, 21);
+            this.cbLoaiSP.Size = new System.Drawing.Size(146, 21);
             this.cbLoaiSP.TabIndex = 1;
             this.cbLoaiSP.SelectedIndexChanged += new System.EventHandler(this.cbLoaiSP_SelectedIndexChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtMaSP);
-            this.groupBox1.Controls.Add(this.cbMau);
-            this.groupBox1.Controls.Add(this.cbSize);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtSoLuong);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(335, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(477, 84);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi tiết sản phẩm";
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.Location = new System.Drawing.Point(123, 19);
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(114, 21);
-            this.txtMaSP.TabIndex = 2;
-            // 
-            // cbMau
-            // 
-            this.cbMau.FormattingEnabled = true;
-            this.cbMau.Location = new System.Drawing.Point(326, 54);
-            this.cbMau.Name = "cbMau";
-            this.cbMau.Size = new System.Drawing.Size(139, 21);
-            this.cbMau.TabIndex = 1;
-            // 
-            // cbSize
-            // 
-            this.cbSize.FormattingEnabled = true;
-            this.cbSize.Location = new System.Drawing.Point(326, 20);
-            this.cbSize.Name = "cbSize";
-            this.cbSize.Size = new System.Drawing.Size(139, 21);
-            this.cbSize.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(260, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mau:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Mã Sản Phẩm:\r\n";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Số Lượng:";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(260, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Size:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // gridView3
             // 
@@ -225,6 +142,8 @@ namespace GUI
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.txtSoLuongConDuoi);
+            this.panel5.Controls.Add(this.simpleButton1);
             this.panel5.Controls.Add(this.lbThongBao);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.btnThem);
@@ -232,13 +151,14 @@ namespace GUI
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(329, 84);
+            this.panel5.Size = new System.Drawing.Size(500, 84);
             this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -441,8 +361,95 @@ namespace GUI
             this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtMaSP);
+            this.groupBox1.Controls.Add(this.cbMau);
+            this.groupBox1.Controls.Add(this.cbSize);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtSoLuong);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(500, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(312, 84);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chi tiết sản phẩm";
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Location = new System.Drawing.Point(123, 19);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(114, 21);
+            this.txtMaSP.TabIndex = 2;
+            // 
+            // cbMau
+            // 
+            this.cbMau.FormattingEnabled = true;
+            this.cbMau.Location = new System.Drawing.Point(326, 54);
+            this.cbMau.Name = "cbMau";
+            this.cbMau.Size = new System.Drawing.Size(139, 21);
+            this.cbMau.TabIndex = 1;
+            // 
+            // cbSize
+            // 
+            this.cbSize.FormattingEnabled = true;
+            this.cbSize.Location = new System.Drawing.Point(326, 20);
+            this.cbSize.Name = "cbSize";
+            this.cbSize.Size = new System.Drawing.Size(139, 21);
+            this.cbSize.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(260, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mau:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 19);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Mã Sản Phẩm:\r\n";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Số Lượng:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(260, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Size:";
+            // 
             // txtSoLuong
             // 
+            this.txtSoLuong.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.txtSoLuong.Location = new System.Drawing.Point(123, 57);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -454,6 +461,34 @@ namespace GUI
             this.txtSoLuong.Size = new System.Drawing.Size(114, 20);
             this.txtSoLuong.TabIndex = 3;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(233, 46);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(120, 32);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "Tồn còn dưới:";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // txtSoLuongConDuoi
+            // 
+            this.txtSoLuongConDuoi.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtSoLuongConDuoi.Location = new System.Drawing.Point(383, 52);
+            this.txtSoLuongConDuoi.Name = "txtSoLuongConDuoi";
+            this.txtSoLuongConDuoi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSoLuongConDuoi.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSoLuongConDuoi.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSoLuongConDuoi.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtSoLuongConDuoi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtSoLuongConDuoi.Size = new System.Drawing.Size(111, 20);
+            this.txtSoLuongConDuoi.TabIndex = 4;
+            // 
             // formNhapHang_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,8 +499,6 @@ namespace GUI
             this.Size = new System.Drawing.Size(812, 445);
             this.Load += new System.EventHandler(this.formNhapHang_main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnThem.Properties)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -480,24 +513,19 @@ namespace GUI
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongConDuoi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.ButtonEdit btnThem;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbLoaiSP;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaSP;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbMau;
-        private System.Windows.Forms.ComboBox cbSize;
         private System.Windows.Forms.Label lbThongBao;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private System.Windows.Forms.Panel panel5;
@@ -520,6 +548,16 @@ namespace GUI
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtMaSP;
+        private System.Windows.Forms.ComboBox cbMau;
+        private System.Windows.Forms.ComboBox cbSize;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SpinEdit txtSoLuong;
+        private DevExpress.XtraEditors.SpinEdit txtSoLuongConDuoi;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

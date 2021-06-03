@@ -89,6 +89,7 @@ namespace BLL_DAL
         }
         public void themCTSP(CHITIETSANPHAM ctsp)
         {
+            ctsp.SOLUONGTON = 0;
             db.CHITIETSANPHAMs.InsertOnSubmit(ctsp);
             db.SubmitChanges();
         }

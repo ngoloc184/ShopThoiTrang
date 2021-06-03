@@ -14,6 +14,24 @@ namespace BLL_DAL
         {
             return dbContext.SANPHAMs.Where(sp => sp.MALOAISANPHAM == maLoai);
         }
+        public List<SANPHAM> listSPTheoSoLuongTon(int soLuongTon)
+        {
+            List<SANPHAM> listSP = new List<SANPHAM>();
+            var lSP = dbContext.SANPHAMs.ToList();
+            foreach (var item in lSP)
+            {
+                var ctsp = dbContext.CHITIETSANPHAMs.Where(t => t.MASANPHAM == item.MASANPHAM).ToList();
+                Boolean kt = false;
+                foreach(var itemCT in ctsp)
+                {
+                    if (itemCT.SOLUONGTON <= soLuongTon)
+                        kt = true;
+                }
+                if (kt == true)
+                    listSP.Add(item);
+            }
+            return listSP;
+        }
         //public List<SANPHAM> loadSPTheoLoai(int maLoai)
         //{
         //    var list = dbContext.SANPHAMs.Where(t => t.MALOAISANPHAM == maLoai).Select(t => new
