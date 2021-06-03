@@ -68,10 +68,13 @@ namespace GUI
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            int mactsp = int.Parse(gridView1.GetFocusedRowCellDisplayText("iMaChiTiteSP"));
-          //  Program.dsPhieuNhap.XoaItem(mactsp);
-            MessageBox.Show("Đã xóa Sản phẩm:  " + mactsp);
-            load_DL();
+            if (MessageBox.Show("Bạn có chắc là xóa SP này khỏi danh sách?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                int mactsp = int.Parse(gridView1.GetFocusedRowCellDisplayText("MACHITIETSANPHAM"));
+                Program.dsPhieuNhap.XoaItem(mactsp);
+                MessageBox.Show("Đã xóa Sản phẩm:  " + mactsp);
+                load_DL();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -283,7 +283,7 @@ namespace GUI
 
             try
             {
-                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Image\\nhanvien\\" + nv.HINHANH);
+                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\nhanvien\\" + nv.HINHANH);
             }
             catch
             {
@@ -642,6 +642,11 @@ namespace GUI
                 txtSDT.Focus();
                 return false;
             }
+            if (txtSDT.Text.Length != 10)
+            {
+                XtraMessageBox.Show("Số điện thoại phải 10 số!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             if (txtDiaChi.Text != "")
             {
                 diaChi = txtDiaChi.Text.ToString();
@@ -669,6 +674,13 @@ namespace GUI
             else
             {
                 XtraMessageBox.Show("Bạn chưa nhập lương", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtLuong.Focus();
+                return false;
+            }
+            float n;
+            if (!float.TryParse(txtLuong.Text, out n))
+            {
+                XtraMessageBox.Show("Lương chỉ được nhập số", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtLuong.Focus();
                 return false;
             }
@@ -700,6 +712,15 @@ namespace GUI
                 nv.TENNHANVIEN = tenNV;
                 nv.NGAYSINH =DateTime.Parse(ngaySinh);
                 nv.GIOITINH = gioiTinh;
+                if (sdt != nv.SDT)
+                {
+                    nv.SDT = sdt;
+                }
+                else
+                {
+                    XtraMessageBox.Show("SDT không được trùng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
                 nv.SDT = sdt;
                 nv.DIACHI = diaChi;
                 nv.CMND = cmnd;
@@ -717,7 +738,7 @@ namespace GUI
             }
             catch
             {
-                XtraMessageBox.Show("Sửa không thành công ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Ngày sinh không hợp lệ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return true;
         }
@@ -736,6 +757,27 @@ namespace GUI
         {
             
             loadData();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormThemTKNV tknv = new FormThemTKNV();
+            tknv.ShowDialog();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("Bạn có muốn thoát khỏi Form Không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

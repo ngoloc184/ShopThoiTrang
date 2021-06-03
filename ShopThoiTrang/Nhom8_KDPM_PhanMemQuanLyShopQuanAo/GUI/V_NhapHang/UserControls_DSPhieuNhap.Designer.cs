@@ -63,6 +63,7 @@ namespace GUI.V_NhapHang
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHITIETPHIEUNHAPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXacNhan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHuy)).BeginInit();
@@ -90,9 +91,6 @@ namespace GUI.V_NhapHang
             // cHITIETPHIEUNHAPBindingSource
             // 
             this.cHITIETPHIEUNHAPBindingSource.DataMember = "CHITIETPHIEUNHAP";
-            // 
-            // shopThoiTrang_DataSet
-            // 
             // 
             // gridView1
             // 
@@ -156,6 +154,8 @@ namespace GUI.V_NhapHang
             this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn1.FieldName = "NGAYLAP";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 3;
             this.gridColumn1.Width = 64;
@@ -236,9 +236,6 @@ namespace GUI.V_NhapHang
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // pHIEUNHAPTableAdapter
-            // 
-            // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Mã Chi Tiết";
@@ -285,9 +282,6 @@ namespace GUI.V_NhapHang
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
-            // 
-            // chitietphieunhapTableAdapter2
-            // 
             // 
             // UserControls_DSPhieuNhap
             // 

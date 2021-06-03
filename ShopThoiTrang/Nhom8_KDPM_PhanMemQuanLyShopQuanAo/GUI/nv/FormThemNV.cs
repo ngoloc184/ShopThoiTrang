@@ -295,6 +295,13 @@ namespace GUI
                 txtLuong.Focus();
                 return false;
             }
+            float n;
+            if (!float.TryParse(txtLuong.Text, out n))
+            {
+                XtraMessageBox.Show("Lương chỉ được nhập số", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtLuong.Focus();
+                return false;
+            }
             if (txtTinhTrang.Text != "")
             {
                 tinhTrang = txtTinhTrang.Text.ToString();
@@ -349,7 +356,7 @@ namespace GUI
             }
             catch
             {
-                XtraMessageBox.Show("Thêm không thành công ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Ngày sinh không hợp lệ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return true;

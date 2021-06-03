@@ -13,6 +13,10 @@ namespace BLL_DAL
         {
             return db.NHANVIENs.ToList();
         }
+        public List<TAIKHOANNHANVIEN> loadTKNV()
+        {
+            return db.TAIKHOANNHANVIENs.ToList();
+        }
 
         public Boolean kiemTraNhanVienDaTonTaiTrongHD(int maNV)
         {

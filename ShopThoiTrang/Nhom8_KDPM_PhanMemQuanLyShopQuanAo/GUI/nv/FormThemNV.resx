@@ -195,10 +195,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="barDockControlTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+    <value>0, 29</value>
+  </data>
+  <data name="barDockControlTop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="barDockControlTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 0</value>
+    <value>514, 0</value>
   </data>
   <data name="&gt;&gt;barDockControlTop.Name" xml:space="preserve">
     <value>barDockControlTop</value>
@@ -216,10 +219,13 @@
     <value>Bottom</value>
   </data>
   <data name="barDockControlBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 305</value>
+    <value>0, 380</value>
+  </data>
+  <data name="barDockControlBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="barDockControlBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 0</value>
+    <value>514, 0</value>
   </data>
   <data name="&gt;&gt;barDockControlBottom.Name" xml:space="preserve">
     <value>barDockControlBottom</value>
@@ -237,10 +243,13 @@
     <value>Left</value>
   </data>
   <data name="barDockControlLeft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+    <value>0, 29</value>
+  </data>
+  <data name="barDockControlLeft.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="barDockControlLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 278</value>
+    <value>0, 351</value>
   </data>
   <data name="&gt;&gt;barDockControlLeft.Name" xml:space="preserve">
     <value>barDockControlLeft</value>
@@ -258,10 +267,13 @@
     <value>Right</value>
   </data>
   <data name="barDockControlRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 27</value>
+    <value>514, 29</value>
+  </data>
+  <data name="barDockControlRight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 278</value>
+    <value>0, 351</value>
   </data>
   <data name="&gt;&gt;barDockControlRight.Name" xml:space="preserve">
     <value>barDockControlRight</value>
@@ -279,19 +291,19 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>7, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>441, 327</value>
+    <value>514, 402</value>
   </data>
   <data name="txtGioiTinh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 58</value>
+    <value>78, 66</value>
   </data>
   <data name="txtGioiTinh.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtGioiTinh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 21</value>
+    <value>424, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtGioiTinh.TabIndex" type="System.Int32, mscorlib">
@@ -310,13 +322,13 @@
     <value>4</value>
   </data>
   <data name="txtChucVu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 204</value>
+    <value>78, 234</value>
   </data>
   <data name="txtChucVu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtChucVu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 21</value>
+    <value>424, 24</value>
   </data>
   <data name="txtChucVu.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -334,13 +346,13 @@
     <value>5</value>
   </data>
   <data name="txtTinhTrang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 179</value>
+    <value>78, 204</value>
   </data>
   <data name="txtTinhTrang.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtTinhTrang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 21</value>
+    <value>424, 24</value>
   </data>
   <data name="txtTinhTrang.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -358,13 +370,13 @@
     <value>6</value>
   </data>
   <data name="txtLuong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 155</value>
+    <value>78, 177</value>
   </data>
   <data name="txtLuong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtLuong.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 20</value>
+    <value>424, 23</value>
   </data>
   <data name="txtLuong.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -382,13 +394,13 @@
     <value>7</value>
   </data>
   <data name="txtCMND.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 131</value>
+    <value>78, 150</value>
   </data>
   <data name="txtCMND.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtCMND.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 20</value>
+    <value>424, 23</value>
   </data>
   <data name="txtCMND.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -406,13 +418,13 @@
     <value>8</value>
   </data>
   <data name="txtDiaChi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 107</value>
+    <value>78, 123</value>
   </data>
   <data name="txtDiaChi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtDiaChi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 20</value>
+    <value>424, 23</value>
   </data>
   <data name="txtDiaChi.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -430,13 +442,13 @@
     <value>9</value>
   </data>
   <data name="txtSDT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 83</value>
+    <value>78, 96</value>
   </data>
   <data name="txtSDT.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtSDT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 20</value>
+    <value>424, 23</value>
   </data>
   <data name="txtSDT.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -454,13 +466,13 @@
     <value>10</value>
   </data>
   <data name="txtNgaySinh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 34</value>
+    <value>78, 39</value>
   </data>
   <data name="txtNgaySinh.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtNgaySinh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 20</value>
+    <value>424, 23</value>
   </data>
   <data name="txtNgaySinh.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -478,13 +490,13 @@
     <value>11</value>
   </data>
   <data name="txtHoTen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 10</value>
+    <value>78, 12</value>
   </data>
   <data name="txtHoTen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="txtHoTen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 20</value>
+    <value>424, 23</value>
   </data>
   <data name="txtHoTen.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -538,7 +550,7 @@
     <value>Giới tính</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 278</value>
+    <value>514, 351</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -562,10 +574,13 @@
     <value>Fill</value>
   </data>
   <data name="frmThemNV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+    <value>0, 29</value>
+  </data>
+  <data name="frmThemNV.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="frmThemNV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 278</value>
+    <value>514, 351</value>
   </data>
   <data name="frmThemNV.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -586,7 +601,7 @@
     <value>Left</value>
   </data>
   <data name="barDockControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+    <value>0, 29</value>
   </data>
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>990, 17</value>
@@ -750,7 +765,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="barDockControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 27</value>
+    <value>514, 29</value>
   </data>
   <data name="&gt;&gt;barDockControl1.Name" xml:space="preserve">
     <value>barDockControl1</value>
@@ -768,13 +783,13 @@
     <value>Bottom</value>
   </data>
   <data name="barDockControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 305</value>
+    <value>0, 380</value>
   </data>
   <data name="barDockControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="barDockControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 22</value>
+    <value>514, 22</value>
   </data>
   <data name="&gt;&gt;barDockControl2.Name" xml:space="preserve">
     <value>barDockControl2</value>
@@ -792,13 +807,13 @@
     <value>Right</value>
   </data>
   <data name="barDockControl4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 27</value>
+    <value>514, 29</value>
   </data>
   <data name="barDockControl4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="barDockControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 278</value>
+    <value>0, 351</value>
   </data>
   <data name="&gt;&gt;barDockControl4.Name" xml:space="preserve">
     <value>barDockControl4</value>
@@ -819,7 +834,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="barDockControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 278</value>
+    <value>0, 351</value>
   </data>
   <data name="&gt;&gt;barDockControl3.Name" xml:space="preserve">
     <value>barDockControl3</value>
@@ -832,6 +847,9 @@
   </data>
   <data name="&gt;&gt;barDockControl3.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

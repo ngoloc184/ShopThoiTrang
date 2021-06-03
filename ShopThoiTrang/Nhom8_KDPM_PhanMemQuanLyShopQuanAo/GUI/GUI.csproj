@@ -195,6 +195,12 @@
     <Compile Include="Cashier\FormTN.Designer.cs">
       <DependentUpon>FormTN.cs</DependentUpon>
     </Compile>
+    <Compile Include="nv\FormThemTKNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nv\FormThemTKNV.Designer.cs">
+      <DependentUpon>FormThemTKNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="nv\FormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\FormTN.resx">
       <DependentUpon>FormTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nv\FormThemTKNV.resx">
+      <DependentUpon>FormThemTKNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="nv\FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
