@@ -1458,3 +1458,4 @@ C:\Users\lavip\Downloads\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DA
 C:\Users\lavip\Downloads\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
 C:\Users\lavip\Downloads\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.dll
 C:\Users\lavip\Downloads\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.pdb
+E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache

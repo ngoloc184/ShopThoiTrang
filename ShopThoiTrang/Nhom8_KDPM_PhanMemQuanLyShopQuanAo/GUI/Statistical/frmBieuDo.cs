@@ -106,6 +106,7 @@ namespace GUI
             //Load vào biểu đồ
 
             chart1.DataSource = view;
+            chart1.ChartAreas["ChartArea1"].AxisX.Interval = 1;
             //chart1.Series["Nhập hàng"].ArgumentDataMember = "Thang";
             chart1.Series["Bán hàng"].XValueMember = "Thang";
             chart1.Series["Bán hàng"].YValueMembers = "TongTien_BAN";
@@ -152,6 +153,7 @@ namespace GUI
             {
                 chart2.DataSource = xl.SanPhamNhap(ngaybatdau, ngayketthuc);
             }
+            chart2.ChartAreas["ChartArea1"].AxisX.Interval = 1;
             chart2.Series["Sản phẩm"].XValueMember = "TENSANPHAM";
             chart2.Series["Sản phẩm"].YValueMembers = "soluong";
 
