@@ -13,6 +13,10 @@ namespace BLL_DAL
         {
             return db.NHANVIENs.ToList();
         }
+        public List<string> loaDSNV()
+        {
+            return db.NHANVIENs.Select(t=>t.MANHANVIEN+" - "+t.TENNHANVIEN).ToList();
+        }
         public List<TAIKHOANNHANVIEN> loadTKNV()
         {
             return db.TAIKHOANNHANVIENs.ToList();

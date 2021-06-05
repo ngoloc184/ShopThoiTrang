@@ -139,13 +139,13 @@ namespace GUI
                 ctsp.SOLUONGTON = 0;
                 chiTietSanPham_BLL.themCTSP(ctsp);
                Program.dsPhieuNhap.Them(ctsp.MACHITIETSP, int.Parse(txtSoLuong.Text));
-                lbThongBao.Text = ctsp.SANPHAM.TENSANPHAM + " " + ctsp.SIZE.TENSIZE + " " + ctsp.MAU.TENMAU + " " + txtSoLuong.Text;
+                MessageBox.Show("Bạn vừa thêm: " + ctsp.SANPHAM.TENSANPHAM + " " + ctsp.SIZE.TENSIZE + " " + ctsp.MAU.TENMAU + " " + txtSoLuong.Text);
                 return;
                 //đã thêm;
             }    
          
            Program.dsPhieuNhap.Them(ctspt.MACHITIETSP, int.Parse(txtSoLuong.Text));
-            lbThongBao.Text = ctspt.SANPHAM.TENSANPHAM + " " + ctspt.SIZE.TENSIZE + " " + ctspt.MAU.TENMAU + " " + txtSoLuong.Text;
+            MessageBox.Show("Bạn vừa thêm: " + ctspt.SANPHAM.TENSANPHAM + " " + ctspt.SIZE.TENSIZE + " " + ctspt.MAU.TENMAU + " " + txtSoLuong.Text);
         }
 
         private void btnThem_EditValueChanged(object sender, EventArgs e)
@@ -193,8 +193,15 @@ namespace GUI
                 MessageBox.Show("Vui lòng chỉ điền số lượng >0");
                 return;
             }
-            gridControl1.DataSource = sanphambll.listSPTheoSoLuongTon(int.Parse(txtSoLuongConDuoi.Text)).ToList();
-
+            var db = (from sp in sanphambll.listSPTheoSoLuongTon(int.Parse(txtSoLuongConDuoi.Text))
+                      select new
+                      {
+                          MASANPHAM = sp.MASANPHAM,
+                          TENSANPHAM = sp.TENSANPHAM,
+                          DONGIA = sp.DONGIA * 0.7,
+                          LOAISANPHAM = sp.LOAISANPHAM.TENLOAISANPHAM
+                      }).ToList();
+            gridControl1.DataSource = db;
         }
     }
 }

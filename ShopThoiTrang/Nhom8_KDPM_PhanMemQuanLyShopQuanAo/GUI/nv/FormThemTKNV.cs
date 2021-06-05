@@ -20,7 +20,7 @@ namespace GUI
         private static readonly object viewChanged = new object();
         private static readonly object settingsReloaded = new object();
         private StatusMessagesHelper statusMessagesHelper;
-
+        NhanVien_BLLDAL NhanVien_BLLDAL = new NhanVien_BLLDAL();
         protected virtual void RaiseViewChanged(DevExpress.ExpressApp.View view)
         {
             EventHandler<TemplateViewChangedEventArgs> handler = (EventHandler<TemplateViewChangedEventArgs>)Events[viewChanged];
@@ -267,9 +267,10 @@ namespace GUI
                     {
                         tk.TENTAIKHOAN = tenTk;
                     }    
+                    
                     tk.MATKHAU = mk;
                     tk.TRANGTHAI = bool.Parse(txtTrangThai.Text);
-                    tk.MANHANVIEN = int.Parse(maNV);
+                    tk.MANHANVIEN = int.Parse(txtMaNV.Text.Substring(0,1));
                     tk.NGAYTAO = DateTime.Now;
                     db.TAIKHOANNHANVIENs.InsertOnSubmit(tk);
                     db.SubmitChanges();
@@ -293,6 +294,7 @@ namespace GUI
         {
             List<string> gioiTinh = new List<string> { "true", "false" };
             txtTrangThai.DataSource = gioiTinh;
+            txtMaNV.DataSource = NhanVien_BLLDAL.loaDSNV();
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)

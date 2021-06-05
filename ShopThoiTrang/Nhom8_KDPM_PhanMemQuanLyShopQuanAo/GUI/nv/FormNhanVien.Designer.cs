@@ -701,6 +701,8 @@ namespace GUI
             this.gridColumn1.FieldName = "MANHANVIEN";
             this.gridColumn1.MinWidth = 21;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.AllowFocus = false;
             // 
             // gridColumn2
             // 
@@ -708,6 +710,8 @@ namespace GUI
             this.gridColumn2.FieldName = "TENNHANVIEN";
             this.gridColumn2.MinWidth = 21;
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.AllowFocus = false;
             // 
             // gridColumn3
             // 
@@ -715,6 +719,8 @@ namespace GUI
             this.gridColumn3.FieldName = "NGAYSINH";
             this.gridColumn3.MinWidth = 21;
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
             // 
             // gridColumn4
             // 
@@ -722,6 +728,8 @@ namespace GUI
             this.gridColumn4.FieldName = "GIOITINH";
             this.gridColumn4.MinWidth = 21;
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.OptionsColumn.AllowFocus = false;
             // 
             // gridColumn5
             // 
@@ -729,6 +737,8 @@ namespace GUI
             this.gridColumn5.FieldName = "SDT";
             this.gridColumn5.MinWidth = 21;
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.OptionsColumn.AllowFocus = false;
             // 
             // gridColumn6
             // 
@@ -736,6 +746,8 @@ namespace GUI
             this.gridColumn6.FieldName = "DIACHI";
             this.gridColumn6.MinWidth = 21;
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.OptionsColumn.AllowFocus = false;
             // 
             // gridColumn7
             // 
@@ -743,6 +755,8 @@ namespace GUI
             this.gridColumn7.FieldName = "CMND";
             this.gridColumn7.MinWidth = 21;
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
+            this.gridColumn7.OptionsColumn.AllowFocus = false;
             // 
             // groupBox1
             // 

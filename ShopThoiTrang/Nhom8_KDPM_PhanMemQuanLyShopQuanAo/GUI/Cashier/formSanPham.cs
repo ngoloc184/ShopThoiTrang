@@ -52,15 +52,23 @@ namespace GUI.Cashier
             lbTenSp.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]) + "";
             lbDonGia.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2]) + " VNĐ";
             lbSoLuongTon.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[3]) + " Hàng";
-            if (Boolean.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]) + "") == true)
-                lbTrangThai.Text = "Còn hàng";
-            else
-                lbTrangThai.Text = "Hết hàng";
-            if ((gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "").Length > 150)
-                lbMoTa.Text = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "").Substring(0, 150) + "...";
-            else
-                lbMoTa.Text = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "");
-            picHinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"sanpham\" + gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]));
+            try
+            {
+                if (Boolean.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]) + "") == true)
+                    lbTrangThai.Text = "Còn hàng";
+                else
+                    lbTrangThai.Text = "Hết hàng";
+                if ((gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "").Length > 150)
+                    lbMoTa.Text = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "").Substring(0, 150) + "...";
+                else
+                    lbMoTa.Text = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]) + "");
+                picHinhAnh.Image = Image.FromFile(Program.linkURL_Image + @"sanpham\" + gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]));
+            }
+            catch
+            {
+                MessageBox.Show("Xin Lỗi SP vừa hết hàng!");
+            }
+          
 
         }
 

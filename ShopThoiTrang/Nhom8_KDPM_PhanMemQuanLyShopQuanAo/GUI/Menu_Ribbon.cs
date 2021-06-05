@@ -179,6 +179,22 @@ namespace GUI
             }
 
         }
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(FormGiamGia));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                FormGiamGia f = new FormGiamGia
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
+        }
         #region Methods
         //Kiểm tra sự tồn tại của form con
         private Form KiemTraTonTai(Type fType)
@@ -192,5 +208,6 @@ namespace GUI
         }
         #endregion
 
+        
     }
 }

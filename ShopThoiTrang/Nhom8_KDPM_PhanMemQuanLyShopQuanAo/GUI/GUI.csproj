@@ -195,6 +195,12 @@
     <Compile Include="Cashier\FormTN.Designer.cs">
       <DependentUpon>FormTN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Ribbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Ribbon.Designer.cs">
+      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
+    </Compile>
     <Compile Include="nv\FormThemTKNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,12 +312,6 @@
     <Compile Include="V_NhapHang\formNhapHang_main.Designer.cs">
       <DependentUpon>formNhapHang_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Ribbon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu_Ribbon.Designer.cs">
-      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
-    </Compile>
     <Compile Include="V_NhapHang\UsercontrolCart_PhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -399,6 +399,9 @@
     <EmbeddedResource Include="Cashier\FormTN.resx">
       <DependentUpon>FormTN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Ribbon.resx">
+      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="nv\FormThemTKNV.resx">
       <DependentUpon>FormThemTKNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,9 +460,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V_NhapHang\formNhapHang_main.resx">
       <DependentUpon>formNhapHang_main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Ribbon.resx">
-      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V_NhapHang\UsercontrolCart_PhieuNhap.resx">
       <DependentUpon>UsercontrolCart_PhieuNhap.cs</DependentUpon>

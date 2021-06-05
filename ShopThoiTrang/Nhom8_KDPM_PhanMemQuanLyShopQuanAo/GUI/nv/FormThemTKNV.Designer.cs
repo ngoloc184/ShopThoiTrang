@@ -99,7 +99,6 @@ namespace GUI
             this.viewSitePanel = new DevExpress.XtraEditors.PanelControl();
             this.txtTrangThai = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtNhapLaiMK = new System.Windows.Forms.TextBox();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtTenTK = new System.Windows.Forms.TextBox();
@@ -118,6 +117,7 @@ namespace GUI
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
+            this.txtMaNV = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actionContainerObjectsCreation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actionContainerFile)).BeginInit();
@@ -606,9 +606,9 @@ namespace GUI
             // viewSitePanel
             // 
             this.viewSitePanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.viewSitePanel.Controls.Add(this.txtMaNV);
             this.viewSitePanel.Controls.Add(this.txtTrangThai);
             this.viewSitePanel.Controls.Add(this.label5);
-            this.viewSitePanel.Controls.Add(this.txtMaNV);
             this.viewSitePanel.Controls.Add(this.txtNhapLaiMK);
             this.viewSitePanel.Controls.Add(this.txtMK);
             this.viewSitePanel.Controls.Add(this.txtTenTK);
@@ -630,11 +630,6 @@ namespace GUI
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            // 
-            // txtMaNV
-            // 
-            resources.ApplyResources(this.txtMaNV, "txtMaNV");
-            this.txtMaNV.Name = "txtMaNV";
             // 
             // txtNhapLaiMK
             // 
@@ -782,6 +777,12 @@ namespace GUI
             resources.ApplyResources(this.barDockControl4, "barDockControl4");
             this.barDockControl4.Manager = this.barManager1;
             // 
+            // txtMaNV
+            // 
+            this.txtMaNV.FormattingEnabled = true;
+            resources.ApplyResources(this.txtMaNV, "txtMaNV");
+            this.txtMaNV.Name = "txtMaNV";
+            // 
             // FormThemTKNV
             // 
             resources.ApplyResources(this, "$this");
@@ -904,7 +905,6 @@ namespace GUI
         private DevExpress.XtraBars.BarDockControl barDockControl1;
         private DevExpress.XtraBars.BarDockControl barDockControl2;
         private DevExpress.XtraBars.BarDockControl barDockControl4;
-        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtNhapLaiMK;
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.TextBox txtTenTK;
@@ -914,5 +914,6 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox txtTrangThai;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox txtMaNV;
     }
 }
