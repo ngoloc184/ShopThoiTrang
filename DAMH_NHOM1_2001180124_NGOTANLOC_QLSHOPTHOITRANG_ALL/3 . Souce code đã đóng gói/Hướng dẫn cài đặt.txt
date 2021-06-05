@@ -1,0 +1,3 @@
+Bước 1. Mở file Sql Quản lí shop thời trang đính kèm
+Bước 2. Chạy file tại server name local(.\sqlexpress)
+Bước 3. Cài đặt file Setup_QLShopThoiTrang.

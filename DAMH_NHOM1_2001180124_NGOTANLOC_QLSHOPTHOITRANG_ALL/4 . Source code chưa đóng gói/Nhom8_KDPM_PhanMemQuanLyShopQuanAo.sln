@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{EDB0112A-F206-4435-ACF7-C1B8729886DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAL", "BLL_DAL\BLL_DAL.csproj", "{1700D60F-36A2-479F-AF02-2F7F04F8C97F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_QLShopThoiTrang", "Setup_QLShopThoiTrang\Setup_QLShopThoiTrang.vdproj", "{7982AB15-B18B-424D-B645-4940FEC3A899}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDB0112A-F206-4435-ACF7-C1B8729886DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB0112A-F206-4435-ACF7-C1B8729886DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB0112A-F206-4435-ACF7-C1B8729886DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB0112A-F206-4435-ACF7-C1B8729886DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1700D60F-36A2-479F-AF02-2F7F04F8C97F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1700D60F-36A2-479F-AF02-2F7F04F8C97F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1700D60F-36A2-479F-AF02-2F7F04F8C97F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1700D60F-36A2-479F-AF02-2F7F04F8C97F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7982AB15-B18B-424D-B645-4940FEC3A899}.Debug|Any CPU.ActiveCfg = Debug
+		{7982AB15-B18B-424D-B645-4940FEC3A899}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4392CC2D-56A3-4367-812A-BA68094905F6}
+	EndGlobalSection
+EndGlobal
